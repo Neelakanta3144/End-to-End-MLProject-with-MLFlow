@@ -257,3 +257,151 @@ Source-Age: 0
 [2026-02-07 16:12:15,208: INFO: data_transformation: (1199, 12)]
 [2026-02-07 16:12:15,210: INFO: data_transformation: (400, 12)]
 [2026-02-07 16:12:15,365: INFO: main: >>>>>>>> Data Transformation Stage completed <<<<<<<]
+[2026-02-07 22:14:14,589: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-07 22:14:14,886: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-07 22:14:14,898: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-07 22:14:15,024: INFO: common: created directory at: artifacts]
+[2026-02-07 22:14:15,030: INFO: common: created directory at: artifacts/model_trainer]
+[2026-02-07 22:16:02,275: INFO: main: >>>>>>>> Data Ingestion Stage started <<<<<<<<]
+[2026-02-07 22:16:02,280: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-07 22:16:02,282: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-07 22:16:02,285: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-07 22:16:02,286: INFO: common: created directory at: artifacts]
+[2026-02-07 22:16:02,287: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-02-07 22:16:04,313: INFO: data_ingestion: artifacts/data_ingestion/data.zip download! with following info: 
+Connection: close
+Content-Length: 23329
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "c69888a4ae59bc5a893392785a938ccd4937981c06ba8a9d6a21aa52b4ab5b6e"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: D85E:21E7B0:1EE2BC:5068FB:6988653E
+Accept-Ranges: bytes
+Date: Sun, 08 Feb 2026 10:28:14 GMT
+Via: 1.1 varnish
+X-Served-By: cache-maa10231-MAA
+X-Cache: MISS
+X-Cache-Hits: 0
+X-Timer: S1770546495.524536,VS0,VE258
+Vary: Authorization,Accept-Encoding
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: 832766c478d0f7e482a54e66e1fe6f438980e943
+Expires: Sun, 08 Feb 2026 10:33:14 GMT
+Source-Age: 0
+
+]
+[2026-02-07 22:16:04,360: INFO: main: >>>>>>>> Data Ingestion Stage completed <<<<<<<]
+[2026-02-07 22:16:04,361: INFO: main: >>>>>>>> Data Validation Stage started <<<<<<<<]
+[2026-02-07 22:16:04,369: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-07 22:16:04,371: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-07 22:16:04,377: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-07 22:16:04,379: INFO: common: created directory at: artifacts]
+[2026-02-07 22:16:04,380: INFO: common: created directory at: artifacts/data_validation]
+[2026-02-07 22:16:04,543: INFO: main: >>>>>>>> Data Validation Stage completed <<<<<<<]
+[2026-02-07 22:16:04,543: INFO: main: >>>>>>>> Data Transformation Stage started <<<<<<<<]
+[2026-02-07 22:16:04,548: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-07 22:16:04,549: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-07 22:16:04,552: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-07 22:16:04,553: INFO: common: created directory at: artifacts]
+[2026-02-07 22:16:04,555: INFO: common: created directory at: artifacts/data_transformation]
+[2026-02-07 22:16:04,640: INFO: data_transformation: Splited data into training and test sets]
+[2026-02-07 22:16:04,640: INFO: data_transformation: (1199, 12)]
+[2026-02-07 22:16:04,641: INFO: data_transformation: (400, 12)]
+[2026-02-07 22:16:04,642: INFO: main: >>>>>>>> Data Transformation Stage completed <<<<<<<]
+[2026-02-07 22:16:50,437: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-07 22:16:50,443: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-07 22:16:50,450: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-07 22:16:50,451: INFO: common: created directory at: artifacts]
+[2026-02-07 22:16:50,458: INFO: common: created directory at: artifacts/model_trainer]
+[2026-02-07 22:33:04,513: INFO: main: >>>>>>>> Data Ingestion Stage started <<<<<<<<]
+[2026-02-07 22:33:04,519: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-07 22:33:04,521: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-07 22:33:04,536: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-07 22:33:04,540: INFO: common: created directory at: artifacts]
+[2026-02-07 22:33:04,540: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-02-07 22:33:05,022: ERROR: main: HTTP Error 502: Bad Gateway or Proxy Error]
+Traceback (most recent call last):
+  File "main.py", line 12, in <module>
+    data_ingestion.start_pipeline()
+  File "e:\end-to-end-mlproject-with-mlflow\src\mlProject\pipeline\stage_01_data_ingestion.py", line 14, in start_pipeline
+    data_ingestion.download_file()
+  File "e:\end-to-end-mlproject-with-mlflow\src\mlProject\components\data_ingestion.py", line 17, in download_file
+    filename, headers = request.urlretrieve(
+  File "C:\Users\neelakanta\AppData\Local\Programs\Python\Python38\lib\urllib\request.py", line 247, in urlretrieve
+    with contextlib.closing(urlopen(url, data)) as fp:
+  File "C:\Users\neelakanta\AppData\Local\Programs\Python\Python38\lib\urllib\request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Users\neelakanta\AppData\Local\Programs\Python\Python38\lib\urllib\request.py", line 531, in open
+    response = meth(req, response)
+  File "C:\Users\neelakanta\AppData\Local\Programs\Python\Python38\lib\urllib\request.py", line 640, in http_response
+    response = self.parent.error(
+  File "C:\Users\neelakanta\AppData\Local\Programs\Python\Python38\lib\urllib\request.py", line 569, in error
+    return self._call_chain(*args)
+  File "C:\Users\neelakanta\AppData\Local\Programs\Python\Python38\lib\urllib\request.py", line 502, in _call_chain
+    result = func(*args)
+  File "C:\Users\neelakanta\AppData\Local\Programs\Python\Python38\lib\urllib\request.py", line 649, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 502: Bad Gateway or Proxy Error
+[2026-02-07 22:37:20,241: INFO: main: >>>>>>>> Data Ingestion Stage started <<<<<<<<]
+[2026-02-07 22:37:20,246: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-07 22:37:20,247: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-07 22:37:20,250: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-07 22:37:20,251: INFO: common: created directory at: artifacts]
+[2026-02-07 22:37:20,252: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-02-07 22:37:21,253: INFO: data_ingestion: artifacts/data_ingestion/data.zip download! with following info: 
+Connection: close
+Content-Length: 23329
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "c69888a4ae59bc5a893392785a938ccd4937981c06ba8a9d6a21aa52b4ab5b6e"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: D85E:21E7B0:1EE2BC:5068FB:6988653E
+Accept-Ranges: bytes
+Date: Sun, 08 Feb 2026 10:49:32 GMT
+Via: 1.1 varnish
+X-Served-By: cache-maa10241-MAA
+X-Cache: HIT
+X-Cache-Hits: 0
+X-Timer: S1770547772.298394,VS0,VE242
+Vary: Authorization,Accept-Encoding
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: 77849ac88b9a04fcee22383d14b8182b2d08a301
+Expires: Sun, 08 Feb 2026 10:54:32 GMT
+Source-Age: 0
+
+]
+[2026-02-07 22:37:21,257: INFO: main: >>>>>>>> Data Ingestion Stage completed <<<<<<<]
+[2026-02-07 22:37:21,258: INFO: main: >>>>>>>> Data Validation Stage started <<<<<<<<]
+[2026-02-07 22:37:21,262: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-07 22:37:21,264: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-07 22:37:21,267: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-07 22:37:21,268: INFO: common: created directory at: artifacts]
+[2026-02-07 22:37:21,268: INFO: common: created directory at: artifacts/data_validation]
+[2026-02-07 22:37:21,279: INFO: main: >>>>>>>> Data Validation Stage completed <<<<<<<]
+[2026-02-07 22:37:21,279: INFO: main: >>>>>>>> Data Transformation Stage started <<<<<<<<]
+[2026-02-07 22:37:21,283: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-07 22:37:21,285: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-07 22:37:21,288: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-07 22:37:21,292: INFO: common: created directory at: artifacts]
+[2026-02-07 22:37:21,325: INFO: common: created directory at: artifacts/data_transformation]
+[2026-02-07 22:37:21,393: INFO: data_transformation: Splited data into training and test sets]
+[2026-02-07 22:37:21,394: INFO: data_transformation: (1199, 12)]
+[2026-02-07 22:37:21,394: INFO: data_transformation: (400, 12)]
+[2026-02-07 22:37:21,395: INFO: main: >>>>>>>> Data Transformation Stage completed <<<<<<<]
+[2026-02-07 22:37:21,396: INFO: main: >>>>>>>> Model Training Stage started <<<<<<<<]
+[2026-02-07 22:37:21,401: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-07 22:37:21,403: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-07 22:37:21,407: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-07 22:37:21,408: INFO: common: created directory at: artifacts]
+[2026-02-07 22:37:21,410: INFO: common: created directory at: artifacts/model_trainer]
+[2026-02-07 22:37:21,435: INFO: main: >>>>>>>> Model Training Stage completed <<<<<<<]
