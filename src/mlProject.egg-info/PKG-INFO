@@ -1,0 +1,11 @@
+Metadata-Version: 1.2
+Name: mlProject
+Version: 0.0.0
+Summary: A small python package for ml app
+Home-page: https://github.com/Neelakanta3144/End-to-end-ML-Project-with-MLFlow
+Author: Neelakanta3144
+Author-email: neelakantasapare@gmail.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/Neelakanta3144/End-to-end-ML-Project-with-MLFlow/issues
+Description: # End-to-End-MLProject-with-MLFlow
+Platform: UNKNOWN
