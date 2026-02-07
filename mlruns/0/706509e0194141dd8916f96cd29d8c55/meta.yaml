@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/706509e0194141dd8916f96cd29d8c55/artifacts
+end_time: 1770488529626
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 706509e0194141dd8916f96cd29d8c55
+run_name: colorful-turtle-658
+run_uuid: 706509e0194141dd8916f96cd29d8c55
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1770488523938
+status: 4
+tags: []
+user_id: neelakanta

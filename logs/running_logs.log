@@ -405,3 +405,735 @@ Source-Age: 0
 [2026-02-07 22:37:21,408: INFO: common: created directory at: artifacts]
 [2026-02-07 22:37:21,410: INFO: common: created directory at: artifacts/model_trainer]
 [2026-02-07 22:37:21,435: INFO: main: >>>>>>>> Model Training Stage completed <<<<<<<]
+[2026-02-07 23:26:11,777: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-07 23:26:12,134: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-07 23:26:12,140: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-07 23:26:12,277: INFO: common: created directory at: artifacts]
+[2026-02-07 23:26:12,279: INFO: common: created directory at: artifacts/model_evaluation]
+[2026-02-07 23:26:15,856: INFO: common: json file saved at: artifacts\model_evaluation\metrics.json]
+[2026-02-07 23:48:06,088: INFO: main: >>>>>>>> Data Ingestion Stage started <<<<<<<<]
+[2026-02-07 23:48:06,094: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-07 23:48:06,095: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-07 23:48:06,098: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-07 23:48:06,099: INFO: common: created directory at: artifacts]
+[2026-02-07 23:48:06,099: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-02-07 23:48:08,773: INFO: data_ingestion: artifacts/data_ingestion/data.zip download! with following info: 
+Connection: close
+Content-Length: 23329
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "c69888a4ae59bc5a893392785a938ccd4937981c06ba8a9d6a21aa52b4ab5b6e"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 8674:26CB36:1FD0CF:536B30:69887AD4
+Accept-Ranges: bytes
+Date: Sun, 08 Feb 2026 12:00:21 GMT
+Via: 1.1 varnish
+X-Served-By: cache-maa10246-MAA
+X-Cache: MISS
+X-Cache-Hits: 0
+X-Timer: S1770552021.383617,VS0,VE252
+Vary: Authorization,Accept-Encoding
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: bf8658c78f4a1197a04f580612721560b4404cea
+Expires: Sun, 08 Feb 2026 12:05:21 GMT
+Source-Age: 0
+
+]
+[2026-02-07 23:48:08,781: INFO: main: >>>>>>>> Data Ingestion Stage completed <<<<<<<]
+[2026-02-07 23:48:08,781: INFO: main: >>>>>>>> Data Validation Stage started <<<<<<<<]
+[2026-02-07 23:48:08,793: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-07 23:48:08,819: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-07 23:48:08,828: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-07 23:48:08,831: INFO: common: created directory at: artifacts]
+[2026-02-07 23:48:08,846: INFO: common: created directory at: artifacts/data_validation]
+[2026-02-07 23:48:08,889: INFO: main: >>>>>>>> Data Validation Stage completed <<<<<<<]
+[2026-02-07 23:48:08,890: INFO: main: >>>>>>>> Data Transformation Stage started <<<<<<<<]
+[2026-02-07 23:48:08,900: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-07 23:48:08,902: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-07 23:48:08,905: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-07 23:48:08,907: INFO: common: created directory at: artifacts]
+[2026-02-07 23:48:08,909: INFO: common: created directory at: artifacts/data_transformation]
+[2026-02-07 23:48:09,043: INFO: data_transformation: Splited data into training and test sets]
+[2026-02-07 23:48:09,090: INFO: data_transformation: (1199, 12)]
+[2026-02-07 23:48:09,091: INFO: data_transformation: (400, 12)]
+[2026-02-07 23:48:09,093: INFO: main: >>>>>>>> Data Transformation Stage completed <<<<<<<]
+[2026-02-07 23:48:09,093: INFO: main: >>>>>>>> Model Training Stage started <<<<<<<<]
+[2026-02-07 23:48:09,100: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-07 23:48:09,121: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-07 23:48:09,125: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-07 23:48:09,126: INFO: common: created directory at: artifacts]
+[2026-02-07 23:48:09,128: INFO: common: created directory at: artifacts/model_trainer]
+[2026-02-07 23:48:09,365: INFO: main: >>>>>>>> Model Training Stage completed <<<<<<<]
+[2026-02-07 23:48:09,366: INFO: main: >>>>>>>> Model Evaluation Stage started <<<<<<<<]
+[2026-02-07 23:48:09,376: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-07 23:48:09,378: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-07 23:48:09,382: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-07 23:48:09,383: INFO: common: created directory at: artifacts]
+[2026-02-07 23:48:09,384: INFO: common: created directory at: artifacts/model_evaluation]
+[2026-02-07 23:48:09,585: INFO: common: json file saved at: artifacts\model_evaluation\metrics.json]
+[2026-02-07 23:48:15,957: ERROR: main: The configured tracking uri scheme: 'file' is invalid for use with the proxy mlflow-artifact scheme. The allowed tracking schemes are: {'http', 'https'}]
+Traceback (most recent call last):
+  File "main.py", line 57, in <module>
+    model_evaluation.start_pipeline()
+  File "e:\end-to-end-mlproject-with-mlflow\src\mlProject\pipeline\stage_05_model_evaluation.py", line 15, in start_pipeline
+    model_evaluation_config.log_into_mlflow()
+  File "e:\end-to-end-mlproject-with-mlflow\src\mlProject\components\model_evaluation.py", line 65, in log_into_mlflow
+    mlflow.sklearn.log_model(model, "model")
+  File "E:\End-to-End-MLProject-with-MLFlow\venv\lib\site-packages\mlflow\sklearn\__init__.py", line 424, in log_model
+    return Model.log(
+  File "E:\End-to-End-MLProject-with-MLFlow\venv\lib\site-packages\mlflow\models\model.py", line 552, in log
+    mlflow.tracking.fluent.log_artifacts(local_path, mlflow_model.artifact_path)
+  File "E:\End-to-End-MLProject-with-MLFlow\venv\lib\site-packages\mlflow\tracking\fluent.py", line 817, in log_artifacts
+    MlflowClient().log_artifacts(run_id, local_dir, artifact_path)
+  File "E:\End-to-End-MLProject-with-MLFlow\venv\lib\site-packages\mlflow\tracking\client.py", line 1069, in log_artifacts
+    self._tracking_client.log_artifacts(run_id, local_dir, artifact_path)
+  File "E:\End-to-End-MLProject-with-MLFlow\venv\lib\site-packages\mlflow\tracking\_tracking_service\client.py", line 448, in log_artifacts
+    self._get_artifact_repo(run_id).log_artifacts(local_dir, artifact_path)
+  File "E:\End-to-End-MLProject-with-MLFlow\venv\lib\site-packages\mlflow\tracking\_tracking_service\client.py", line 416, in _get_artifact_repo
+    artifact_repo = get_artifact_repository(artifact_uri)
+  File "E:\End-to-End-MLProject-with-MLFlow\venv\lib\site-packages\mlflow\store\artifact\artifact_repository_registry.py", line 106, in get_artifact_repository
+    return _artifact_repository_registry.get_artifact_repository(artifact_uri)
+  File "E:\End-to-End-MLProject-with-MLFlow\venv\lib\site-packages\mlflow\store\artifact\artifact_repository_registry.py", line 72, in get_artifact_repository
+    return repository(artifact_uri)
+  File "E:\End-to-End-MLProject-with-MLFlow\venv\lib\site-packages\mlflow\store\artifact\mlflow_artifacts_repo.py", line 45, in __init__
+    super().__init__(self.resolve_uri(artifact_uri, get_tracking_uri()))
+  File "E:\End-to-End-MLProject-with-MLFlow\venv\lib\site-packages\mlflow\store\artifact\mlflow_artifacts_repo.py", line 59, in resolve_uri
+    _validate_uri_scheme(track_parse.scheme)
+  File "E:\End-to-End-MLProject-with-MLFlow\venv\lib\site-packages\mlflow\store\artifact\mlflow_artifacts_repo.py", line 35, in _validate_uri_scheme
+    raise MlflowException(
+mlflow.exceptions.MlflowException: The configured tracking uri scheme: 'file' is invalid for use with the proxy mlflow-artifact scheme. The allowed tracking schemes are: {'http', 'https'}
+[2026-02-07 23:49:07,912: INFO: main: >>>>>>>> Data Ingestion Stage started <<<<<<<<]
+[2026-02-07 23:49:07,918: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-07 23:49:07,919: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-07 23:49:07,923: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-07 23:49:07,924: INFO: common: created directory at: artifacts]
+[2026-02-07 23:49:07,925: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-02-07 23:49:07,926: INFO: data_ingestion: File already exists of size: ~ 23 KB]
+[2026-02-07 23:49:07,931: INFO: main: >>>>>>>> Data Ingestion Stage completed <<<<<<<]
+[2026-02-07 23:49:07,932: INFO: main: >>>>>>>> Data Validation Stage started <<<<<<<<]
+[2026-02-07 23:49:07,937: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-07 23:49:07,938: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-07 23:49:07,942: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-07 23:49:07,943: INFO: common: created directory at: artifacts]
+[2026-02-07 23:49:07,943: INFO: common: created directory at: artifacts/data_validation]
+[2026-02-07 23:49:07,959: INFO: main: >>>>>>>> Data Validation Stage completed <<<<<<<]
+[2026-02-07 23:49:07,960: INFO: main: >>>>>>>> Data Transformation Stage started <<<<<<<<]
+[2026-02-07 23:49:07,966: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-07 23:49:07,968: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-07 23:49:07,971: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-07 23:49:07,972: INFO: common: created directory at: artifacts]
+[2026-02-07 23:49:07,973: INFO: common: created directory at: artifacts/data_transformation]
+[2026-02-07 23:49:08,081: INFO: data_transformation: Splited data into training and test sets]
+[2026-02-07 23:49:08,101: INFO: data_transformation: (1199, 12)]
+[2026-02-07 23:49:08,101: INFO: data_transformation: (400, 12)]
+[2026-02-07 23:49:08,103: INFO: main: >>>>>>>> Data Transformation Stage completed <<<<<<<]
+[2026-02-07 23:49:08,103: INFO: main: >>>>>>>> Model Training Stage started <<<<<<<<]
+[2026-02-07 23:49:08,109: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-07 23:49:08,113: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-07 23:49:08,117: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-07 23:49:08,117: INFO: common: created directory at: artifacts]
+[2026-02-07 23:49:08,118: INFO: common: created directory at: artifacts/model_trainer]
+[2026-02-07 23:49:08,222: INFO: main: >>>>>>>> Model Training Stage completed <<<<<<<]
+[2026-02-07 23:49:08,223: INFO: main: >>>>>>>> Model Evaluation Stage started <<<<<<<<]
+[2026-02-07 23:49:08,230: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-07 23:49:08,232: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-07 23:49:08,235: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-07 23:49:08,236: INFO: common: created directory at: artifacts]
+[2026-02-07 23:49:08,237: INFO: common: created directory at: artifacts/model_evaluation]
+[2026-02-07 23:49:08,509: INFO: common: json file saved at: artifacts\model_evaluation\metrics.json]
+[2026-02-07 23:49:13,968: ERROR: main: The configured tracking uri scheme: 'file' is invalid for use with the proxy mlflow-artifact scheme. The allowed tracking schemes are: {'https', 'http'}]
+Traceback (most recent call last):
+  File "main.py", line 57, in <module>
+    model_evaluation.start_pipeline()
+  File "e:\end-to-end-mlproject-with-mlflow\src\mlProject\pipeline\stage_05_model_evaluation.py", line 15, in start_pipeline
+    model_evaluation_config.log_into_mlflow()
+  File "e:\end-to-end-mlproject-with-mlflow\src\mlProject\components\model_evaluation.py", line 65, in log_into_mlflow
+    mlflow.sklearn.log_model(model, "model")
+  File "E:\End-to-End-MLProject-with-MLFlow\venv\lib\site-packages\mlflow\sklearn\__init__.py", line 424, in log_model
+    return Model.log(
+  File "E:\End-to-End-MLProject-with-MLFlow\venv\lib\site-packages\mlflow\models\model.py", line 552, in log
+    mlflow.tracking.fluent.log_artifacts(local_path, mlflow_model.artifact_path)
+  File "E:\End-to-End-MLProject-with-MLFlow\venv\lib\site-packages\mlflow\tracking\fluent.py", line 817, in log_artifacts
+    MlflowClient().log_artifacts(run_id, local_dir, artifact_path)
+  File "E:\End-to-End-MLProject-with-MLFlow\venv\lib\site-packages\mlflow\tracking\client.py", line 1069, in log_artifacts
+    self._tracking_client.log_artifacts(run_id, local_dir, artifact_path)
+  File "E:\End-to-End-MLProject-with-MLFlow\venv\lib\site-packages\mlflow\tracking\_tracking_service\client.py", line 448, in log_artifacts
+    self._get_artifact_repo(run_id).log_artifacts(local_dir, artifact_path)
+  File "E:\End-to-End-MLProject-with-MLFlow\venv\lib\site-packages\mlflow\tracking\_tracking_service\client.py", line 416, in _get_artifact_repo
+    artifact_repo = get_artifact_repository(artifact_uri)
+  File "E:\End-to-End-MLProject-with-MLFlow\venv\lib\site-packages\mlflow\store\artifact\artifact_repository_registry.py", line 106, in get_artifact_repository
+    return _artifact_repository_registry.get_artifact_repository(artifact_uri)
+  File "E:\End-to-End-MLProject-with-MLFlow\venv\lib\site-packages\mlflow\store\artifact\artifact_repository_registry.py", line 72, in get_artifact_repository
+    return repository(artifact_uri)
+  File "E:\End-to-End-MLProject-with-MLFlow\venv\lib\site-packages\mlflow\store\artifact\mlflow_artifacts_repo.py", line 45, in __init__
+    super().__init__(self.resolve_uri(artifact_uri, get_tracking_uri()))
+  File "E:\End-to-End-MLProject-with-MLFlow\venv\lib\site-packages\mlflow\store\artifact\mlflow_artifacts_repo.py", line 59, in resolve_uri
+    _validate_uri_scheme(track_parse.scheme)
+  File "E:\End-to-End-MLProject-with-MLFlow\venv\lib\site-packages\mlflow\store\artifact\mlflow_artifacts_repo.py", line 35, in _validate_uri_scheme
+    raise MlflowException(
+mlflow.exceptions.MlflowException: The configured tracking uri scheme: 'file' is invalid for use with the proxy mlflow-artifact scheme. The allowed tracking schemes are: {'https', 'http'}
+[2026-02-07 23:52:01,807: INFO: main: >>>>>>>> Data Ingestion Stage started <<<<<<<<]
+[2026-02-07 23:52:01,812: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-07 23:52:01,813: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-07 23:52:01,817: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-07 23:52:01,817: INFO: common: created directory at: artifacts]
+[2026-02-07 23:52:01,818: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-02-07 23:52:03,535: INFO: data_ingestion: artifacts/data_ingestion/data.zip download! with following info: 
+Connection: close
+Content-Length: 23329
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "c69888a4ae59bc5a893392785a938ccd4937981c06ba8a9d6a21aa52b4ab5b6e"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 8674:26CB36:1FD0CF:536B30:69887AD4
+Accept-Ranges: bytes
+Date: Sun, 08 Feb 2026 12:04:16 GMT
+Via: 1.1 varnish
+X-Served-By: cache-maa10246-MAA
+X-Cache: HIT
+X-Cache-Hits: 0
+X-Timer: S1770552256.279661,VS0,VE1
+Vary: Authorization,Accept-Encoding
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: 567366dc8ae10a930538dd6383085f91ec7df2e5
+Expires: Sun, 08 Feb 2026 12:09:16 GMT
+Source-Age: 235
+
+]
+[2026-02-07 23:52:03,538: INFO: main: >>>>>>>> Data Ingestion Stage completed <<<<<<<]
+[2026-02-07 23:52:03,538: INFO: main: >>>>>>>> Data Validation Stage started <<<<<<<<]
+[2026-02-07 23:52:03,544: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-07 23:52:03,548: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-07 23:52:03,553: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-07 23:52:03,564: INFO: common: created directory at: artifacts]
+[2026-02-07 23:52:03,567: INFO: common: created directory at: artifacts/data_validation]
+[2026-02-07 23:52:03,582: INFO: main: >>>>>>>> Data Validation Stage completed <<<<<<<]
+[2026-02-07 23:52:03,583: INFO: main: >>>>>>>> Data Transformation Stage started <<<<<<<<]
+[2026-02-07 23:52:03,588: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-07 23:52:03,613: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-07 23:52:03,622: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-07 23:52:03,623: INFO: common: created directory at: artifacts]
+[2026-02-07 23:52:03,624: INFO: common: created directory at: artifacts/data_transformation]
+[2026-02-07 23:52:03,663: INFO: data_transformation: Splited data into training and test sets]
+[2026-02-07 23:52:03,665: INFO: data_transformation: (1199, 12)]
+[2026-02-07 23:52:03,665: INFO: data_transformation: (400, 12)]
+[2026-02-07 23:52:03,667: INFO: main: >>>>>>>> Data Transformation Stage completed <<<<<<<]
+[2026-02-07 23:52:03,667: INFO: main: >>>>>>>> Model Training Stage started <<<<<<<<]
+[2026-02-07 23:52:03,673: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-07 23:52:03,675: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-07 23:52:03,682: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-07 23:52:03,683: INFO: common: created directory at: artifacts]
+[2026-02-07 23:52:03,685: INFO: common: created directory at: artifacts/model_trainer]
+[2026-02-07 23:52:03,708: INFO: main: >>>>>>>> Model Training Stage completed <<<<<<<]
+[2026-02-07 23:52:03,708: INFO: main: >>>>>>>> Model Evaluation Stage started <<<<<<<<]
+[2026-02-07 23:52:03,715: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-07 23:52:03,716: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-07 23:52:03,720: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-07 23:52:03,721: INFO: common: created directory at: artifacts]
+[2026-02-07 23:52:03,721: INFO: common: created directory at: artifacts/model_evaluation]
+[2026-02-07 23:52:03,971: INFO: common: json file saved at: artifacts\model_evaluation\metrics.json]
+[2026-02-07 23:52:09,629: ERROR: main: The configured tracking uri scheme: 'file' is invalid for use with the proxy mlflow-artifact scheme. The allowed tracking schemes are: {'http', 'https'}]
+Traceback (most recent call last):
+  File "main.py", line 57, in <module>
+    model_evaluation.start_pipeline()
+  File "e:\end-to-end-mlproject-with-mlflow\src\mlProject\pipeline\stage_05_model_evaluation.py", line 15, in start_pipeline
+    model_evaluation_config.log_into_mlflow()
+  File "e:\end-to-end-mlproject-with-mlflow\src\mlProject\components\model_evaluation.py", line 65, in log_into_mlflow
+    mlflow.sklearn.log_model(model, "model")
+  File "E:\End-to-End-MLProject-with-MLFlow\venv\lib\site-packages\mlflow\sklearn\__init__.py", line 424, in log_model
+    return Model.log(
+  File "E:\End-to-End-MLProject-with-MLFlow\venv\lib\site-packages\mlflow\models\model.py", line 552, in log
+    mlflow.tracking.fluent.log_artifacts(local_path, mlflow_model.artifact_path)
+  File "E:\End-to-End-MLProject-with-MLFlow\venv\lib\site-packages\mlflow\tracking\fluent.py", line 817, in log_artifacts
+    MlflowClient().log_artifacts(run_id, local_dir, artifact_path)
+  File "E:\End-to-End-MLProject-with-MLFlow\venv\lib\site-packages\mlflow\tracking\client.py", line 1069, in log_artifacts
+    self._tracking_client.log_artifacts(run_id, local_dir, artifact_path)
+  File "E:\End-to-End-MLProject-with-MLFlow\venv\lib\site-packages\mlflow\tracking\_tracking_service\client.py", line 448, in log_artifacts
+    self._get_artifact_repo(run_id).log_artifacts(local_dir, artifact_path)
+  File "E:\End-to-End-MLProject-with-MLFlow\venv\lib\site-packages\mlflow\tracking\_tracking_service\client.py", line 416, in _get_artifact_repo
+    artifact_repo = get_artifact_repository(artifact_uri)
+  File "E:\End-to-End-MLProject-with-MLFlow\venv\lib\site-packages\mlflow\store\artifact\artifact_repository_registry.py", line 106, in get_artifact_repository
+    return _artifact_repository_registry.get_artifact_repository(artifact_uri)
+  File "E:\End-to-End-MLProject-with-MLFlow\venv\lib\site-packages\mlflow\store\artifact\artifact_repository_registry.py", line 72, in get_artifact_repository
+    return repository(artifact_uri)
+  File "E:\End-to-End-MLProject-with-MLFlow\venv\lib\site-packages\mlflow\store\artifact\mlflow_artifacts_repo.py", line 45, in __init__
+    super().__init__(self.resolve_uri(artifact_uri, get_tracking_uri()))
+  File "E:\End-to-End-MLProject-with-MLFlow\venv\lib\site-packages\mlflow\store\artifact\mlflow_artifacts_repo.py", line 59, in resolve_uri
+    _validate_uri_scheme(track_parse.scheme)
+  File "E:\End-to-End-MLProject-with-MLFlow\venv\lib\site-packages\mlflow\store\artifact\mlflow_artifacts_repo.py", line 35, in _validate_uri_scheme
+    raise MlflowException(
+mlflow.exceptions.MlflowException: The configured tracking uri scheme: 'file' is invalid for use with the proxy mlflow-artifact scheme. The allowed tracking schemes are: {'http', 'https'}
+[2026-02-07 23:55:17,409: INFO: main: >>>>>>>> Data Ingestion Stage started <<<<<<<<]
+[2026-02-07 23:55:17,415: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-07 23:55:17,417: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-07 23:55:17,421: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-07 23:55:17,423: INFO: common: created directory at: artifacts]
+[2026-02-07 23:55:17,424: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-02-07 23:55:18,653: INFO: data_ingestion: artifacts/data_ingestion/data.zip download! with following info: 
+Connection: close
+Content-Length: 23329
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "c69888a4ae59bc5a893392785a938ccd4937981c06ba8a9d6a21aa52b4ab5b6e"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 8674:26CB36:1FD0CF:536B30:69887AD4
+Accept-Ranges: bytes
+Date: Sun, 08 Feb 2026 12:07:31 GMT
+Via: 1.1 varnish
+X-Served-By: cache-maa10237-MAA
+X-Cache: HIT
+X-Cache-Hits: 0
+X-Timer: S1770552452.527640,VS0,VE242
+Vary: Authorization,Accept-Encoding
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: cbe5ed16a8fc25dd6b759ac2e9a1b737b483ccb5
+Expires: Sun, 08 Feb 2026 12:12:31 GMT
+Source-Age: 0
+
+]
+[2026-02-07 23:55:18,659: INFO: main: >>>>>>>> Data Ingestion Stage completed <<<<<<<]
+[2026-02-07 23:55:18,659: INFO: main: >>>>>>>> Data Validation Stage started <<<<<<<<]
+[2026-02-07 23:55:18,670: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-07 23:55:18,672: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-07 23:55:18,678: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-07 23:55:18,682: INFO: common: created directory at: artifacts]
+[2026-02-07 23:55:18,692: INFO: common: created directory at: artifacts/data_validation]
+[2026-02-07 23:55:18,708: INFO: main: >>>>>>>> Data Validation Stage completed <<<<<<<]
+[2026-02-07 23:55:18,709: INFO: main: >>>>>>>> Data Transformation Stage started <<<<<<<<]
+[2026-02-07 23:55:18,714: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-07 23:55:18,715: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-07 23:55:18,719: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-07 23:55:18,720: INFO: common: created directory at: artifacts]
+[2026-02-07 23:55:18,721: INFO: common: created directory at: artifacts/data_transformation]
+[2026-02-07 23:55:18,789: INFO: data_transformation: Splited data into training and test sets]
+[2026-02-07 23:55:18,789: INFO: data_transformation: (1199, 12)]
+[2026-02-07 23:55:18,789: INFO: data_transformation: (400, 12)]
+[2026-02-07 23:55:18,790: INFO: main: >>>>>>>> Data Transformation Stage completed <<<<<<<]
+[2026-02-07 23:55:18,790: INFO: main: >>>>>>>> Model Training Stage started <<<<<<<<]
+[2026-02-07 23:55:18,810: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-07 23:55:18,812: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-07 23:55:18,816: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-07 23:55:18,818: INFO: common: created directory at: artifacts]
+[2026-02-07 23:55:18,820: INFO: common: created directory at: artifacts/model_trainer]
+[2026-02-07 23:55:18,847: INFO: main: >>>>>>>> Model Training Stage completed <<<<<<<]
+[2026-02-07 23:55:18,847: INFO: main: >>>>>>>> Model Evaluation Stage started <<<<<<<<]
+[2026-02-07 23:55:18,854: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-07 23:55:18,858: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-07 23:55:18,863: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-07 23:55:18,866: INFO: common: created directory at: artifacts]
+[2026-02-07 23:55:18,867: INFO: common: created directory at: artifacts/model_evaluation]
+[2026-02-07 23:55:20,044: INFO: common: json file saved at: artifacts\model_evaluation\metrics.json]
+[2026-02-07 23:55:31,524: INFO: main: >>>>>>>> Model Evaluation Stage completed <<<<<<<]
+[2026-02-07 23:59:36,118: INFO: main: >>>>>>>> Data Ingestion Stage started <<<<<<<<]
+[2026-02-07 23:59:36,129: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-07 23:59:36,132: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-07 23:59:36,136: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-07 23:59:36,137: INFO: common: created directory at: artifacts]
+[2026-02-07 23:59:36,139: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-02-07 23:59:36,140: INFO: data_ingestion: File already exists of size: ~ 23 KB]
+[2026-02-07 23:59:36,145: INFO: main: >>>>>>>> Data Ingestion Stage completed <<<<<<<]
+[2026-02-07 23:59:36,146: INFO: main: >>>>>>>> Data Validation Stage started <<<<<<<<]
+[2026-02-07 23:59:36,151: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-07 23:59:36,153: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-07 23:59:36,157: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-07 23:59:36,159: INFO: common: created directory at: artifacts]
+[2026-02-07 23:59:36,160: INFO: common: created directory at: artifacts/data_validation]
+[2026-02-07 23:59:36,175: INFO: main: >>>>>>>> Data Validation Stage completed <<<<<<<]
+[2026-02-07 23:59:36,176: INFO: main: >>>>>>>> Data Transformation Stage started <<<<<<<<]
+[2026-02-07 23:59:36,183: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-07 23:59:36,187: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-07 23:59:36,194: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-07 23:59:36,197: INFO: common: created directory at: artifacts]
+[2026-02-07 23:59:36,197: INFO: common: created directory at: artifacts/data_transformation]
+[2026-02-07 23:59:36,235: INFO: data_transformation: Splited data into training and test sets]
+[2026-02-07 23:59:36,237: INFO: data_transformation: (1199, 12)]
+[2026-02-07 23:59:36,238: INFO: data_transformation: (400, 12)]
+[2026-02-07 23:59:36,239: INFO: main: >>>>>>>> Data Transformation Stage completed <<<<<<<]
+[2026-02-07 23:59:36,239: INFO: main: >>>>>>>> Model Training Stage started <<<<<<<<]
+[2026-02-07 23:59:36,246: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-07 23:59:36,250: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-07 23:59:36,255: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-07 23:59:36,257: INFO: common: created directory at: artifacts]
+[2026-02-07 23:59:36,257: INFO: common: created directory at: artifacts/model_trainer]
+[2026-02-07 23:59:36,283: INFO: main: >>>>>>>> Model Training Stage completed <<<<<<<]
+[2026-02-07 23:59:36,284: INFO: main: >>>>>>>> Model Evaluation Stage started <<<<<<<<]
+[2026-02-07 23:59:36,289: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-07 23:59:36,291: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-07 23:59:36,295: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-07 23:59:36,296: INFO: common: created directory at: artifacts]
+[2026-02-07 23:59:36,297: INFO: common: created directory at: artifacts/model_evaluation]
+[2026-02-07 23:59:37,578: INFO: common: json file saved at: artifacts\model_evaluation\metrics.json]
+[2026-02-07 23:59:50,833: INFO: main: >>>>>>>> Model Evaluation Stage completed <<<<<<<]
+[2026-02-08 00:02:30,799: INFO: main: >>>>>>>> Data Ingestion Stage started <<<<<<<<]
+[2026-02-08 00:02:30,805: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-08 00:02:30,806: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-08 00:02:30,810: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-08 00:02:30,810: INFO: common: created directory at: artifacts]
+[2026-02-08 00:02:30,811: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-02-08 00:02:31,862: INFO: data_ingestion: artifacts/data_ingestion/data.zip download! with following info: 
+Connection: close
+Content-Length: 23329
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "c69888a4ae59bc5a893392785a938ccd4937981c06ba8a9d6a21aa52b4ab5b6e"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 8674:26CB36:1FD0CF:536B30:69887AD4
+Accept-Ranges: bytes
+Date: Sun, 08 Feb 2026 12:14:45 GMT
+Via: 1.1 varnish
+X-Served-By: cache-maa10250-MAA
+X-Cache: HIT
+X-Cache-Hits: 0
+X-Timer: S1770552885.894593,VS0,VE233
+Vary: Authorization,Accept-Encoding
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: 5438d9945d848fbbfc75bba6b546f762790a3c83
+Expires: Sun, 08 Feb 2026 12:19:45 GMT
+Source-Age: 0
+
+]
+[2026-02-08 00:02:31,905: INFO: main: >>>>>>>> Data Ingestion Stage completed <<<<<<<]
+[2026-02-08 00:02:31,940: INFO: main: >>>>>>>> Data Validation Stage started <<<<<<<<]
+[2026-02-08 00:02:31,987: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-08 00:02:32,002: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-08 00:02:32,006: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-08 00:02:32,007: INFO: common: created directory at: artifacts]
+[2026-02-08 00:02:32,013: INFO: common: created directory at: artifacts/data_validation]
+[2026-02-08 00:02:32,026: INFO: main: >>>>>>>> Data Validation Stage completed <<<<<<<]
+[2026-02-08 00:02:32,026: INFO: main: >>>>>>>> Data Transformation Stage started <<<<<<<<]
+[2026-02-08 00:02:32,034: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-08 00:02:32,036: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-08 00:02:32,040: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-08 00:02:32,041: INFO: common: created directory at: artifacts]
+[2026-02-08 00:02:32,041: INFO: common: created directory at: artifacts/data_transformation]
+[2026-02-08 00:02:32,086: INFO: data_transformation: Splited data into training and test sets]
+[2026-02-08 00:02:32,100: INFO: data_transformation: (1199, 12)]
+[2026-02-08 00:02:32,130: INFO: data_transformation: (400, 12)]
+[2026-02-08 00:02:32,210: INFO: main: >>>>>>>> Data Transformation Stage completed <<<<<<<]
+[2026-02-08 00:02:32,211: INFO: main: >>>>>>>> Model Training Stage started <<<<<<<<]
+[2026-02-08 00:02:32,217: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-08 00:02:32,219: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-08 00:02:32,222: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-08 00:02:32,228: INFO: common: created directory at: artifacts]
+[2026-02-08 00:02:32,229: INFO: common: created directory at: artifacts/model_trainer]
+[2026-02-08 00:02:32,264: INFO: main: >>>>>>>> Model Training Stage completed <<<<<<<]
+[2026-02-08 00:02:32,268: INFO: main: >>>>>>>> Model Evaluation Stage started <<<<<<<<]
+[2026-02-08 00:02:32,273: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-08 00:02:32,278: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-08 00:02:32,282: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-08 00:02:32,284: INFO: common: created directory at: artifacts]
+[2026-02-08 00:02:32,286: INFO: common: created directory at: artifacts/model_evaluation]
+[2026-02-08 00:02:33,037: INFO: common: json file saved at: artifacts\model_evaluation\metrics.json]
+[2026-02-08 00:02:38,627: ERROR: main: The configured tracking uri scheme: 'file' is invalid for use with the proxy mlflow-artifact scheme. The allowed tracking schemes are: {'https', 'http'}]
+Traceback (most recent call last):
+  File "main.py", line 57, in <module>
+    model_evaluation.start_pipeline()
+  File "e:\end-to-end-mlproject-with-mlflow\src\mlProject\pipeline\stage_05_model_evaluation.py", line 15, in start_pipeline
+    model_evaluation_config.log_into_mlflow()
+  File "e:\end-to-end-mlproject-with-mlflow\src\mlProject\components\model_evaluation.py", line 65, in log_into_mlflow
+    mlflow.sklearn.log_model(model, "model")
+  File "E:\End-to-End-MLProject-with-MLFlow\venv\lib\site-packages\mlflow\sklearn\__init__.py", line 424, in log_model
+    return Model.log(
+  File "E:\End-to-End-MLProject-with-MLFlow\venv\lib\site-packages\mlflow\models\model.py", line 552, in log
+    mlflow.tracking.fluent.log_artifacts(local_path, mlflow_model.artifact_path)
+  File "E:\End-to-End-MLProject-with-MLFlow\venv\lib\site-packages\mlflow\tracking\fluent.py", line 817, in log_artifacts
+    MlflowClient().log_artifacts(run_id, local_dir, artifact_path)
+  File "E:\End-to-End-MLProject-with-MLFlow\venv\lib\site-packages\mlflow\tracking\client.py", line 1069, in log_artifacts
+    self._tracking_client.log_artifacts(run_id, local_dir, artifact_path)
+  File "E:\End-to-End-MLProject-with-MLFlow\venv\lib\site-packages\mlflow\tracking\_tracking_service\client.py", line 448, in log_artifacts
+    self._get_artifact_repo(run_id).log_artifacts(local_dir, artifact_path)
+  File "E:\End-to-End-MLProject-with-MLFlow\venv\lib\site-packages\mlflow\tracking\_tracking_service\client.py", line 416, in _get_artifact_repo
+    artifact_repo = get_artifact_repository(artifact_uri)
+  File "E:\End-to-End-MLProject-with-MLFlow\venv\lib\site-packages\mlflow\store\artifact\artifact_repository_registry.py", line 106, in get_artifact_repository
+    return _artifact_repository_registry.get_artifact_repository(artifact_uri)
+  File "E:\End-to-End-MLProject-with-MLFlow\venv\lib\site-packages\mlflow\store\artifact\artifact_repository_registry.py", line 72, in get_artifact_repository
+    return repository(artifact_uri)
+  File "E:\End-to-End-MLProject-with-MLFlow\venv\lib\site-packages\mlflow\store\artifact\mlflow_artifacts_repo.py", line 45, in __init__
+    super().__init__(self.resolve_uri(artifact_uri, get_tracking_uri()))
+  File "E:\End-to-End-MLProject-with-MLFlow\venv\lib\site-packages\mlflow\store\artifact\mlflow_artifacts_repo.py", line 59, in resolve_uri
+    _validate_uri_scheme(track_parse.scheme)
+  File "E:\End-to-End-MLProject-with-MLFlow\venv\lib\site-packages\mlflow\store\artifact\mlflow_artifacts_repo.py", line 35, in _validate_uri_scheme
+    raise MlflowException(
+mlflow.exceptions.MlflowException: The configured tracking uri scheme: 'file' is invalid for use with the proxy mlflow-artifact scheme. The allowed tracking schemes are: {'https', 'http'}
+[2026-02-08 00:03:16,166: INFO: main: >>>>>>>> Data Ingestion Stage started <<<<<<<<]
+[2026-02-08 00:03:16,171: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-08 00:03:16,173: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-08 00:03:16,176: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-08 00:03:16,177: INFO: common: created directory at: artifacts]
+[2026-02-08 00:03:16,178: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-02-08 00:03:17,347: INFO: data_ingestion: artifacts/data_ingestion/data.zip download! with following info: 
+Connection: close
+Content-Length: 23329
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "c69888a4ae59bc5a893392785a938ccd4937981c06ba8a9d6a21aa52b4ab5b6e"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 8674:26CB36:1FD0CF:536B30:69887AD4
+Accept-Ranges: bytes
+Date: Sun, 08 Feb 2026 12:15:30 GMT
+Via: 1.1 varnish
+X-Served-By: cache-maa10229-MAA
+X-Cache: HIT
+X-Cache-Hits: 1
+X-Timer: S1770552930.410476,VS0,VE1
+Vary: Authorization,Accept-Encoding
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: 1bf9cc70ee8f069055be996ada231d05dabb760d
+Expires: Sun, 08 Feb 2026 12:20:30 GMT
+Source-Age: 45
+
+]
+[2026-02-08 00:03:17,353: INFO: main: >>>>>>>> Data Ingestion Stage completed <<<<<<<]
+[2026-02-08 00:03:17,354: INFO: main: >>>>>>>> Data Validation Stage started <<<<<<<<]
+[2026-02-08 00:03:17,363: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-08 00:03:17,365: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-08 00:03:17,369: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-08 00:03:17,370: INFO: common: created directory at: artifacts]
+[2026-02-08 00:03:17,371: INFO: common: created directory at: artifacts/data_validation]
+[2026-02-08 00:03:17,385: INFO: main: >>>>>>>> Data Validation Stage completed <<<<<<<]
+[2026-02-08 00:03:17,386: INFO: main: >>>>>>>> Data Transformation Stage started <<<<<<<<]
+[2026-02-08 00:03:17,392: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-08 00:03:17,394: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-08 00:03:17,401: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-08 00:03:17,403: INFO: common: created directory at: artifacts]
+[2026-02-08 00:03:17,405: INFO: common: created directory at: artifacts/data_transformation]
+[2026-02-08 00:03:17,456: INFO: data_transformation: Splited data into training and test sets]
+[2026-02-08 00:03:17,458: INFO: data_transformation: (1199, 12)]
+[2026-02-08 00:03:17,459: INFO: data_transformation: (400, 12)]
+[2026-02-08 00:03:17,462: INFO: main: >>>>>>>> Data Transformation Stage completed <<<<<<<]
+[2026-02-08 00:03:17,462: INFO: main: >>>>>>>> Model Training Stage started <<<<<<<<]
+[2026-02-08 00:03:17,467: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-08 00:03:17,469: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-08 00:03:17,474: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-08 00:03:17,480: INFO: common: created directory at: artifacts]
+[2026-02-08 00:03:17,482: INFO: common: created directory at: artifacts/model_trainer]
+[2026-02-08 00:03:17,504: INFO: main: >>>>>>>> Model Training Stage completed <<<<<<<]
+[2026-02-08 00:03:17,504: INFO: main: >>>>>>>> Model Evaluation Stage started <<<<<<<<]
+[2026-02-08 00:03:17,511: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-08 00:03:17,513: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-08 00:03:17,516: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-08 00:03:17,517: INFO: common: created directory at: artifacts]
+[2026-02-08 00:03:17,519: INFO: common: created directory at: artifacts/model_evaluation]
+[2026-02-08 00:03:17,750: INFO: common: json file saved at: artifacts\model_evaluation\metrics.json]
+[2026-02-08 00:03:23,332: ERROR: main: The configured tracking uri scheme: 'file' is invalid for use with the proxy mlflow-artifact scheme. The allowed tracking schemes are: {'https', 'http'}]
+Traceback (most recent call last):
+  File "main.py", line 57, in <module>
+    model_evaluation.start_pipeline()
+  File "e:\end-to-end-mlproject-with-mlflow\src\mlProject\pipeline\stage_05_model_evaluation.py", line 15, in start_pipeline
+    model_evaluation_config.log_into_mlflow()
+  File "e:\end-to-end-mlproject-with-mlflow\src\mlProject\components\model_evaluation.py", line 65, in log_into_mlflow
+    mlflow.sklearn.log_model(model, "model")
+  File "E:\End-to-End-MLProject-with-MLFlow\venv\lib\site-packages\mlflow\sklearn\__init__.py", line 424, in log_model
+    return Model.log(
+  File "E:\End-to-End-MLProject-with-MLFlow\venv\lib\site-packages\mlflow\models\model.py", line 552, in log
+    mlflow.tracking.fluent.log_artifacts(local_path, mlflow_model.artifact_path)
+  File "E:\End-to-End-MLProject-with-MLFlow\venv\lib\site-packages\mlflow\tracking\fluent.py", line 817, in log_artifacts
+    MlflowClient().log_artifacts(run_id, local_dir, artifact_path)
+  File "E:\End-to-End-MLProject-with-MLFlow\venv\lib\site-packages\mlflow\tracking\client.py", line 1069, in log_artifacts
+    self._tracking_client.log_artifacts(run_id, local_dir, artifact_path)
+  File "E:\End-to-End-MLProject-with-MLFlow\venv\lib\site-packages\mlflow\tracking\_tracking_service\client.py", line 448, in log_artifacts
+    self._get_artifact_repo(run_id).log_artifacts(local_dir, artifact_path)
+  File "E:\End-to-End-MLProject-with-MLFlow\venv\lib\site-packages\mlflow\tracking\_tracking_service\client.py", line 416, in _get_artifact_repo
+    artifact_repo = get_artifact_repository(artifact_uri)
+  File "E:\End-to-End-MLProject-with-MLFlow\venv\lib\site-packages\mlflow\store\artifact\artifact_repository_registry.py", line 106, in get_artifact_repository
+    return _artifact_repository_registry.get_artifact_repository(artifact_uri)
+  File "E:\End-to-End-MLProject-with-MLFlow\venv\lib\site-packages\mlflow\store\artifact\artifact_repository_registry.py", line 72, in get_artifact_repository
+    return repository(artifact_uri)
+  File "E:\End-to-End-MLProject-with-MLFlow\venv\lib\site-packages\mlflow\store\artifact\mlflow_artifacts_repo.py", line 45, in __init__
+    super().__init__(self.resolve_uri(artifact_uri, get_tracking_uri()))
+  File "E:\End-to-End-MLProject-with-MLFlow\venv\lib\site-packages\mlflow\store\artifact\mlflow_artifacts_repo.py", line 59, in resolve_uri
+    _validate_uri_scheme(track_parse.scheme)
+  File "E:\End-to-End-MLProject-with-MLFlow\venv\lib\site-packages\mlflow\store\artifact\mlflow_artifacts_repo.py", line 35, in _validate_uri_scheme
+    raise MlflowException(
+mlflow.exceptions.MlflowException: The configured tracking uri scheme: 'file' is invalid for use with the proxy mlflow-artifact scheme. The allowed tracking schemes are: {'https', 'http'}
+[2026-02-08 00:03:47,732: INFO: main: >>>>>>>> Data Ingestion Stage started <<<<<<<<]
+[2026-02-08 00:03:47,738: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-08 00:03:47,739: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-08 00:03:47,743: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-08 00:03:47,743: INFO: common: created directory at: artifacts]
+[2026-02-08 00:03:47,744: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-02-08 00:03:49,129: INFO: data_ingestion: artifacts/data_ingestion/data.zip download! with following info: 
+Connection: close
+Content-Length: 23329
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "c69888a4ae59bc5a893392785a938ccd4937981c06ba8a9d6a21aa52b4ab5b6e"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 8674:26CB36:1FD0CF:536B30:69887AD4
+Accept-Ranges: bytes
+Date: Sun, 08 Feb 2026 12:16:02 GMT
+Via: 1.1 varnish
+X-Served-By: cache-maa10225-MAA
+X-Cache: HIT
+X-Cache-Hits: 1
+X-Timer: S1770552962.309747,VS0,VE1
+Vary: Authorization,Accept-Encoding
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: 057cce538140455c8227410717c86a4dfa2bed93
+Expires: Sun, 08 Feb 2026 12:21:02 GMT
+Source-Age: 77
+
+]
+[2026-02-08 00:03:49,133: INFO: main: >>>>>>>> Data Ingestion Stage completed <<<<<<<]
+[2026-02-08 00:03:49,134: INFO: main: >>>>>>>> Data Validation Stage started <<<<<<<<]
+[2026-02-08 00:03:49,140: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-08 00:03:49,142: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-08 00:03:49,146: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-08 00:03:49,147: INFO: common: created directory at: artifacts]
+[2026-02-08 00:03:49,147: INFO: common: created directory at: artifacts/data_validation]
+[2026-02-08 00:03:49,160: INFO: main: >>>>>>>> Data Validation Stage completed <<<<<<<]
+[2026-02-08 00:03:49,161: INFO: main: >>>>>>>> Data Transformation Stage started <<<<<<<<]
+[2026-02-08 00:03:49,166: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-08 00:03:49,168: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-08 00:03:49,171: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-08 00:03:49,172: INFO: common: created directory at: artifacts]
+[2026-02-08 00:03:49,174: INFO: common: created directory at: artifacts/data_transformation]
+[2026-02-08 00:03:49,213: INFO: data_transformation: Splited data into training and test sets]
+[2026-02-08 00:03:49,214: INFO: data_transformation: (1199, 12)]
+[2026-02-08 00:03:49,214: INFO: data_transformation: (400, 12)]
+[2026-02-08 00:03:49,215: INFO: main: >>>>>>>> Data Transformation Stage completed <<<<<<<]
+[2026-02-08 00:03:49,215: INFO: main: >>>>>>>> Model Training Stage started <<<<<<<<]
+[2026-02-08 00:03:49,221: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-08 00:03:49,226: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-08 00:03:49,230: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-08 00:03:49,231: INFO: common: created directory at: artifacts]
+[2026-02-08 00:03:49,232: INFO: common: created directory at: artifacts/model_trainer]
+[2026-02-08 00:03:49,262: INFO: main: >>>>>>>> Model Training Stage completed <<<<<<<]
+[2026-02-08 00:03:49,262: INFO: main: >>>>>>>> Model Evaluation Stage started <<<<<<<<]
+[2026-02-08 00:03:49,267: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-08 00:03:49,269: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-08 00:03:49,275: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-08 00:03:49,276: INFO: common: created directory at: artifacts]
+[2026-02-08 00:03:49,278: INFO: common: created directory at: artifacts/model_evaluation]
+[2026-02-08 00:03:49,500: INFO: common: json file saved at: artifacts\model_evaluation\metrics.json]
+[2026-02-08 00:03:54,815: ERROR: main: The configured tracking uri scheme: 'file' is invalid for use with the proxy mlflow-artifact scheme. The allowed tracking schemes are: {'https', 'http'}]
+Traceback (most recent call last):
+  File "main.py", line 57, in <module>
+    model_evaluation.start_pipeline()
+  File "e:\end-to-end-mlproject-with-mlflow\src\mlProject\pipeline\stage_05_model_evaluation.py", line 15, in start_pipeline
+    model_evaluation_config.log_into_mlflow()
+  File "e:\end-to-end-mlproject-with-mlflow\src\mlProject\components\model_evaluation.py", line 65, in log_into_mlflow
+    mlflow.sklearn.log_model(model, "model")
+  File "E:\End-to-End-MLProject-with-MLFlow\venv\lib\site-packages\mlflow\sklearn\__init__.py", line 424, in log_model
+    return Model.log(
+  File "E:\End-to-End-MLProject-with-MLFlow\venv\lib\site-packages\mlflow\models\model.py", line 552, in log
+    mlflow.tracking.fluent.log_artifacts(local_path, mlflow_model.artifact_path)
+  File "E:\End-to-End-MLProject-with-MLFlow\venv\lib\site-packages\mlflow\tracking\fluent.py", line 817, in log_artifacts
+    MlflowClient().log_artifacts(run_id, local_dir, artifact_path)
+  File "E:\End-to-End-MLProject-with-MLFlow\venv\lib\site-packages\mlflow\tracking\client.py", line 1069, in log_artifacts
+    self._tracking_client.log_artifacts(run_id, local_dir, artifact_path)
+  File "E:\End-to-End-MLProject-with-MLFlow\venv\lib\site-packages\mlflow\tracking\_tracking_service\client.py", line 448, in log_artifacts
+    self._get_artifact_repo(run_id).log_artifacts(local_dir, artifact_path)
+  File "E:\End-to-End-MLProject-with-MLFlow\venv\lib\site-packages\mlflow\tracking\_tracking_service\client.py", line 416, in _get_artifact_repo
+    artifact_repo = get_artifact_repository(artifact_uri)
+  File "E:\End-to-End-MLProject-with-MLFlow\venv\lib\site-packages\mlflow\store\artifact\artifact_repository_registry.py", line 106, in get_artifact_repository
+    return _artifact_repository_registry.get_artifact_repository(artifact_uri)
+  File "E:\End-to-End-MLProject-with-MLFlow\venv\lib\site-packages\mlflow\store\artifact\artifact_repository_registry.py", line 72, in get_artifact_repository
+    return repository(artifact_uri)
+  File "E:\End-to-End-MLProject-with-MLFlow\venv\lib\site-packages\mlflow\store\artifact\mlflow_artifacts_repo.py", line 45, in __init__
+    super().__init__(self.resolve_uri(artifact_uri, get_tracking_uri()))
+  File "E:\End-to-End-MLProject-with-MLFlow\venv\lib\site-packages\mlflow\store\artifact\mlflow_artifacts_repo.py", line 59, in resolve_uri
+    _validate_uri_scheme(track_parse.scheme)
+  File "E:\End-to-End-MLProject-with-MLFlow\venv\lib\site-packages\mlflow\store\artifact\mlflow_artifacts_repo.py", line 35, in _validate_uri_scheme
+    raise MlflowException(
+mlflow.exceptions.MlflowException: The configured tracking uri scheme: 'file' is invalid for use with the proxy mlflow-artifact scheme. The allowed tracking schemes are: {'https', 'http'}
+[2026-02-08 00:04:23,816: INFO: main: >>>>>>>> Data Ingestion Stage started <<<<<<<<]
+[2026-02-08 00:04:23,821: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-08 00:04:23,822: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-08 00:04:23,825: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-08 00:04:23,826: INFO: common: created directory at: artifacts]
+[2026-02-08 00:04:23,826: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-02-08 00:04:23,827: INFO: data_ingestion: File already exists of size: ~ 23 KB]
+[2026-02-08 00:04:23,830: INFO: main: >>>>>>>> Data Ingestion Stage completed <<<<<<<]
+[2026-02-08 00:04:23,830: INFO: main: >>>>>>>> Data Validation Stage started <<<<<<<<]
+[2026-02-08 00:04:23,835: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-08 00:04:23,837: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-08 00:04:23,841: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-08 00:04:23,842: INFO: common: created directory at: artifacts]
+[2026-02-08 00:04:23,842: INFO: common: created directory at: artifacts/data_validation]
+[2026-02-08 00:04:23,853: INFO: main: >>>>>>>> Data Validation Stage completed <<<<<<<]
+[2026-02-08 00:04:23,854: INFO: main: >>>>>>>> Data Transformation Stage started <<<<<<<<]
+[2026-02-08 00:04:23,865: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-08 00:04:23,868: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-08 00:04:23,874: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-08 00:04:23,875: INFO: common: created directory at: artifacts]
+[2026-02-08 00:04:23,877: INFO: common: created directory at: artifacts/data_transformation]
+[2026-02-08 00:04:23,919: INFO: data_transformation: Splited data into training and test sets]
+[2026-02-08 00:04:23,920: INFO: data_transformation: (1199, 12)]
+[2026-02-08 00:04:23,921: INFO: data_transformation: (400, 12)]
+[2026-02-08 00:04:23,922: INFO: main: >>>>>>>> Data Transformation Stage completed <<<<<<<]
+[2026-02-08 00:04:23,922: INFO: main: >>>>>>>> Model Training Stage started <<<<<<<<]
+[2026-02-08 00:04:23,928: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-08 00:04:23,930: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-08 00:04:23,939: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-08 00:04:23,940: INFO: common: created directory at: artifacts]
+[2026-02-08 00:04:23,941: INFO: common: created directory at: artifacts/model_trainer]
+[2026-02-08 00:04:23,970: INFO: main: >>>>>>>> Model Training Stage completed <<<<<<<]
+[2026-02-08 00:04:23,971: INFO: main: >>>>>>>> Model Evaluation Stage started <<<<<<<<]
+[2026-02-08 00:04:23,977: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-08 00:04:23,986: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-08 00:04:23,990: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-08 00:04:23,991: INFO: common: created directory at: artifacts]
+[2026-02-08 00:04:23,992: INFO: common: created directory at: artifacts/model_evaluation]
+[2026-02-08 00:04:24,344: INFO: common: json file saved at: artifacts\model_evaluation\metrics.json]
+[2026-02-08 00:04:29,605: ERROR: main: The configured tracking uri scheme: 'file' is invalid for use with the proxy mlflow-artifact scheme. The allowed tracking schemes are: {'https', 'http'}]
+Traceback (most recent call last):
+  File "main.py", line 57, in <module>
+    model_evaluation.start_pipeline()
+  File "e:\end-to-end-mlproject-with-mlflow\src\mlProject\pipeline\stage_05_model_evaluation.py", line 15, in start_pipeline
+    model_evaluation_config.log_into_mlflow()
+  File "e:\end-to-end-mlproject-with-mlflow\src\mlProject\components\model_evaluation.py", line 65, in log_into_mlflow
+    mlflow.sklearn.log_model(model, "model")
+  File "E:\End-to-End-MLProject-with-MLFlow\venv\lib\site-packages\mlflow\sklearn\__init__.py", line 424, in log_model
+    return Model.log(
+  File "E:\End-to-End-MLProject-with-MLFlow\venv\lib\site-packages\mlflow\models\model.py", line 552, in log
+    mlflow.tracking.fluent.log_artifacts(local_path, mlflow_model.artifact_path)
+  File "E:\End-to-End-MLProject-with-MLFlow\venv\lib\site-packages\mlflow\tracking\fluent.py", line 817, in log_artifacts
+    MlflowClient().log_artifacts(run_id, local_dir, artifact_path)
+  File "E:\End-to-End-MLProject-with-MLFlow\venv\lib\site-packages\mlflow\tracking\client.py", line 1069, in log_artifacts
+    self._tracking_client.log_artifacts(run_id, local_dir, artifact_path)
+  File "E:\End-to-End-MLProject-with-MLFlow\venv\lib\site-packages\mlflow\tracking\_tracking_service\client.py", line 448, in log_artifacts
+    self._get_artifact_repo(run_id).log_artifacts(local_dir, artifact_path)
+  File "E:\End-to-End-MLProject-with-MLFlow\venv\lib\site-packages\mlflow\tracking\_tracking_service\client.py", line 416, in _get_artifact_repo
+    artifact_repo = get_artifact_repository(artifact_uri)
+  File "E:\End-to-End-MLProject-with-MLFlow\venv\lib\site-packages\mlflow\store\artifact\artifact_repository_registry.py", line 106, in get_artifact_repository
+    return _artifact_repository_registry.get_artifact_repository(artifact_uri)
+  File "E:\End-to-End-MLProject-with-MLFlow\venv\lib\site-packages\mlflow\store\artifact\artifact_repository_registry.py", line 72, in get_artifact_repository
+    return repository(artifact_uri)
+  File "E:\End-to-End-MLProject-with-MLFlow\venv\lib\site-packages\mlflow\store\artifact\mlflow_artifacts_repo.py", line 45, in __init__
+    super().__init__(self.resolve_uri(artifact_uri, get_tracking_uri()))
+  File "E:\End-to-End-MLProject-with-MLFlow\venv\lib\site-packages\mlflow\store\artifact\mlflow_artifacts_repo.py", line 59, in resolve_uri
+    _validate_uri_scheme(track_parse.scheme)
+  File "E:\End-to-End-MLProject-with-MLFlow\venv\lib\site-packages\mlflow\store\artifact\mlflow_artifacts_repo.py", line 35, in _validate_uri_scheme
+    raise MlflowException(
+mlflow.exceptions.MlflowException: The configured tracking uri scheme: 'file' is invalid for use with the proxy mlflow-artifact scheme. The allowed tracking schemes are: {'https', 'http'}
