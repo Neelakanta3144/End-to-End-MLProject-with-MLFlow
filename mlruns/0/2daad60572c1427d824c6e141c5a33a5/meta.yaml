@@ -1,0 +1,15 @@
+artifact_uri: file:///E:/End-to-End-MLProject-with-MLFlow/mlruns/0/2daad60572c1427d824c6e141c5a33a5/artifacts
+end_time: 1770795087388
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 2daad60572c1427d824c6e141c5a33a5
+run_name: secretive-crab-809
+run_uuid: 2daad60572c1427d824c6e141c5a33a5
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1770795080887
+status: 3
+tags: []
+user_id: neelakanta

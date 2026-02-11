@@ -1137,3 +1137,342 @@ Traceback (most recent call last):
   File "E:\End-to-End-MLProject-with-MLFlow\venv\lib\site-packages\mlflow\store\artifact\mlflow_artifacts_repo.py", line 35, in _validate_uri_scheme
     raise MlflowException(
 mlflow.exceptions.MlflowException: The configured tracking uri scheme: 'file' is invalid for use with the proxy mlflow-artifact scheme. The allowed tracking schemes are: {'https', 'http'}
+[2026-02-11 12:29:46,634: INFO: main: >>>>>>>> Data Ingestion Stage started <<<<<<<<]
+[2026-02-11 12:29:46,654: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-11 12:29:46,709: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-11 12:29:46,713: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-11 12:29:46,721: INFO: common: created directory at: artifacts]
+[2026-02-11 12:29:46,722: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-02-11 12:29:46,723: INFO: data_ingestion: File already exists of size: ~ 23 KB]
+[2026-02-11 12:29:46,781: INFO: main: >>>>>>>> Data Ingestion Stage completed <<<<<<<]
+[2026-02-11 12:29:46,782: INFO: main: >>>>>>>> Data Validation Stage started <<<<<<<<]
+[2026-02-11 12:29:46,787: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-11 12:29:46,790: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-11 12:29:46,793: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-11 12:29:46,794: INFO: common: created directory at: artifacts]
+[2026-02-11 12:29:46,795: INFO: common: created directory at: artifacts/data_validation]
+[2026-02-11 12:29:46,935: INFO: main: >>>>>>>> Data Validation Stage completed <<<<<<<]
+[2026-02-11 12:29:46,936: INFO: main: >>>>>>>> Data Transformation Stage started <<<<<<<<]
+[2026-02-11 12:29:46,983: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-11 12:29:46,985: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-11 12:29:46,991: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-11 12:29:47,016: INFO: common: created directory at: artifacts]
+[2026-02-11 12:29:47,017: INFO: common: created directory at: artifacts/data_transformation]
+[2026-02-11 12:29:47,106: INFO: data_transformation: Splited data into training and test sets]
+[2026-02-11 12:29:47,107: INFO: data_transformation: (1199, 12)]
+[2026-02-11 12:29:47,107: INFO: data_transformation: (400, 12)]
+[2026-02-11 12:29:47,114: INFO: main: >>>>>>>> Data Transformation Stage completed <<<<<<<]
+[2026-02-11 12:29:47,115: INFO: main: >>>>>>>> Model Training Stage started <<<<<<<<]
+[2026-02-11 12:29:47,121: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-11 12:29:47,122: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-11 12:29:47,128: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-11 12:29:47,128: INFO: common: created directory at: artifacts]
+[2026-02-11 12:29:47,129: INFO: common: created directory at: artifacts/model_trainer]
+[2026-02-11 12:29:47,257: INFO: main: >>>>>>>> Model Training Stage completed <<<<<<<]
+[2026-02-11 12:29:47,258: INFO: main: >>>>>>>> Model Evaluation Stage started <<<<<<<<]
+[2026-02-11 12:29:47,269: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-11 12:29:47,273: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-11 12:29:47,280: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-11 12:29:47,282: INFO: common: created directory at: artifacts]
+[2026-02-11 12:29:47,283: INFO: common: created directory at: artifacts/model_evaluation]
+[2026-02-11 12:29:47,894: INFO: common: json file saved at: artifacts\model_evaluation\metrics.json]
+[2026-02-11 12:29:56,221: ERROR: main: The configured tracking uri scheme: 'file' is invalid for use with the proxy mlflow-artifact scheme. The allowed tracking schemes are: {'http', 'https'}]
+Traceback (most recent call last):
+  File "main.py", line 57, in <module>
+    model_evaluation.start_pipeline()
+  File "e:\end-to-end-mlproject-with-mlflow\src\mlProject\pipeline\stage_05_model_evaluation.py", line 15, in start_pipeline
+    model_evaluation_config.log_into_mlflow()
+  File "e:\end-to-end-mlproject-with-mlflow\src\mlProject\components\model_evaluation.py", line 65, in log_into_mlflow
+    mlflow.sklearn.log_model(model, "model")
+  File "E:\End-to-End-MLProject-with-MLFlow\venv\lib\site-packages\mlflow\sklearn\__init__.py", line 424, in log_model
+    return Model.log(
+  File "E:\End-to-End-MLProject-with-MLFlow\venv\lib\site-packages\mlflow\models\model.py", line 552, in log
+    mlflow.tracking.fluent.log_artifacts(local_path, mlflow_model.artifact_path)
+  File "E:\End-to-End-MLProject-with-MLFlow\venv\lib\site-packages\mlflow\tracking\fluent.py", line 817, in log_artifacts
+    MlflowClient().log_artifacts(run_id, local_dir, artifact_path)
+  File "E:\End-to-End-MLProject-with-MLFlow\venv\lib\site-packages\mlflow\tracking\client.py", line 1069, in log_artifacts
+    self._tracking_client.log_artifacts(run_id, local_dir, artifact_path)
+  File "E:\End-to-End-MLProject-with-MLFlow\venv\lib\site-packages\mlflow\tracking\_tracking_service\client.py", line 448, in log_artifacts
+    self._get_artifact_repo(run_id).log_artifacts(local_dir, artifact_path)
+  File "E:\End-to-End-MLProject-with-MLFlow\venv\lib\site-packages\mlflow\tracking\_tracking_service\client.py", line 416, in _get_artifact_repo
+    artifact_repo = get_artifact_repository(artifact_uri)
+  File "E:\End-to-End-MLProject-with-MLFlow\venv\lib\site-packages\mlflow\store\artifact\artifact_repository_registry.py", line 106, in get_artifact_repository
+    return _artifact_repository_registry.get_artifact_repository(artifact_uri)
+  File "E:\End-to-End-MLProject-with-MLFlow\venv\lib\site-packages\mlflow\store\artifact\artifact_repository_registry.py", line 72, in get_artifact_repository
+    return repository(artifact_uri)
+  File "E:\End-to-End-MLProject-with-MLFlow\venv\lib\site-packages\mlflow\store\artifact\mlflow_artifacts_repo.py", line 45, in __init__
+    super().__init__(self.resolve_uri(artifact_uri, get_tracking_uri()))
+  File "E:\End-to-End-MLProject-with-MLFlow\venv\lib\site-packages\mlflow\store\artifact\mlflow_artifacts_repo.py", line 59, in resolve_uri
+    _validate_uri_scheme(track_parse.scheme)
+  File "E:\End-to-End-MLProject-with-MLFlow\venv\lib\site-packages\mlflow\store\artifact\mlflow_artifacts_repo.py", line 35, in _validate_uri_scheme
+    raise MlflowException(
+mlflow.exceptions.MlflowException: The configured tracking uri scheme: 'file' is invalid for use with the proxy mlflow-artifact scheme. The allowed tracking schemes are: {'http', 'https'}
+[2026-02-11 12:30:28,462: INFO: main: >>>>>>>> Data Ingestion Stage started <<<<<<<<]
+[2026-02-11 12:30:28,469: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-11 12:30:28,470: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-11 12:30:28,473: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-11 12:30:28,528: INFO: common: created directory at: artifacts]
+[2026-02-11 12:30:28,530: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-02-11 12:30:30,419: INFO: data_ingestion: artifacts/data_ingestion/data.zip download! with following info: 
+Connection: close
+Content-Length: 23329
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "c69888a4ae59bc5a893392785a938ccd4937981c06ba8a9d6a21aa52b4ab5b6e"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 595D:09F6:530A00:C4ABC6:698C290C
+Accept-Ranges: bytes
+Date: Wed, 11 Feb 2026 07:00:29 GMT
+Via: 1.1 varnish
+X-Served-By: cache-maa10234-MAA
+X-Cache: MISS
+X-Cache-Hits: 0
+X-Timer: S1770793230.625063,VS0,VE327
+Vary: Authorization,Accept-Encoding
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: fb9b503f5a6b3e2479dd7d6d19cbbf2759fc8eea
+Expires: Wed, 11 Feb 2026 07:05:29 GMT
+Source-Age: 0
+
+]
+[2026-02-11 12:30:30,440: INFO: main: >>>>>>>> Data Ingestion Stage completed <<<<<<<]
+[2026-02-11 12:30:30,441: INFO: main: >>>>>>>> Data Validation Stage started <<<<<<<<]
+[2026-02-11 12:30:30,446: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-11 12:30:30,447: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-11 12:30:30,450: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-11 12:30:30,451: INFO: common: created directory at: artifacts]
+[2026-02-11 12:30:30,469: INFO: common: created directory at: artifacts/data_validation]
+[2026-02-11 12:30:30,519: INFO: main: >>>>>>>> Data Validation Stage completed <<<<<<<]
+[2026-02-11 12:30:30,519: INFO: main: >>>>>>>> Data Transformation Stage started <<<<<<<<]
+[2026-02-11 12:30:30,525: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-11 12:30:30,527: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-11 12:30:30,530: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-11 12:30:30,531: INFO: common: created directory at: artifacts]
+[2026-02-11 12:30:30,534: INFO: common: created directory at: artifacts/data_transformation]
+[2026-02-11 12:30:30,643: INFO: data_transformation: Splited data into training and test sets]
+[2026-02-11 12:30:30,643: INFO: data_transformation: (1199, 12)]
+[2026-02-11 12:30:30,643: INFO: data_transformation: (400, 12)]
+[2026-02-11 12:30:30,644: INFO: main: >>>>>>>> Data Transformation Stage completed <<<<<<<]
+[2026-02-11 12:30:30,644: INFO: main: >>>>>>>> Model Training Stage started <<<<<<<<]
+[2026-02-11 12:30:30,649: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-11 12:30:30,651: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-11 12:30:30,654: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-11 12:30:30,655: INFO: common: created directory at: artifacts]
+[2026-02-11 12:30:30,657: INFO: common: created directory at: artifacts/model_trainer]
+[2026-02-11 12:30:30,685: INFO: main: >>>>>>>> Model Training Stage completed <<<<<<<]
+[2026-02-11 12:30:30,692: INFO: main: >>>>>>>> Model Evaluation Stage started <<<<<<<<]
+[2026-02-11 12:30:30,698: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-11 12:30:30,700: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-11 12:30:30,703: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-11 12:30:30,707: INFO: common: created directory at: artifacts]
+[2026-02-11 12:30:30,710: INFO: common: created directory at: artifacts/model_evaluation]
+[2026-02-11 12:30:31,004: INFO: common: json file saved at: artifacts\model_evaluation\metrics.json]
+[2026-02-11 12:30:36,383: ERROR: main: The configured tracking uri scheme: 'file' is invalid for use with the proxy mlflow-artifact scheme. The allowed tracking schemes are: {'http', 'https'}]
+Traceback (most recent call last):
+  File "main.py", line 57, in <module>
+    model_evaluation.start_pipeline()
+  File "e:\end-to-end-mlproject-with-mlflow\src\mlProject\pipeline\stage_05_model_evaluation.py", line 15, in start_pipeline
+    model_evaluation_config.log_into_mlflow()
+  File "e:\end-to-end-mlproject-with-mlflow\src\mlProject\components\model_evaluation.py", line 65, in log_into_mlflow
+    mlflow.sklearn.log_model(model, "model")
+  File "E:\End-to-End-MLProject-with-MLFlow\venv\lib\site-packages\mlflow\sklearn\__init__.py", line 424, in log_model
+    return Model.log(
+  File "E:\End-to-End-MLProject-with-MLFlow\venv\lib\site-packages\mlflow\models\model.py", line 552, in log
+    mlflow.tracking.fluent.log_artifacts(local_path, mlflow_model.artifact_path)
+  File "E:\End-to-End-MLProject-with-MLFlow\venv\lib\site-packages\mlflow\tracking\fluent.py", line 817, in log_artifacts
+    MlflowClient().log_artifacts(run_id, local_dir, artifact_path)
+  File "E:\End-to-End-MLProject-with-MLFlow\venv\lib\site-packages\mlflow\tracking\client.py", line 1069, in log_artifacts
+    self._tracking_client.log_artifacts(run_id, local_dir, artifact_path)
+  File "E:\End-to-End-MLProject-with-MLFlow\venv\lib\site-packages\mlflow\tracking\_tracking_service\client.py", line 448, in log_artifacts
+    self._get_artifact_repo(run_id).log_artifacts(local_dir, artifact_path)
+  File "E:\End-to-End-MLProject-with-MLFlow\venv\lib\site-packages\mlflow\tracking\_tracking_service\client.py", line 416, in _get_artifact_repo
+    artifact_repo = get_artifact_repository(artifact_uri)
+  File "E:\End-to-End-MLProject-with-MLFlow\venv\lib\site-packages\mlflow\store\artifact\artifact_repository_registry.py", line 106, in get_artifact_repository
+    return _artifact_repository_registry.get_artifact_repository(artifact_uri)
+  File "E:\End-to-End-MLProject-with-MLFlow\venv\lib\site-packages\mlflow\store\artifact\artifact_repository_registry.py", line 72, in get_artifact_repository
+    return repository(artifact_uri)
+  File "E:\End-to-End-MLProject-with-MLFlow\venv\lib\site-packages\mlflow\store\artifact\mlflow_artifacts_repo.py", line 45, in __init__
+    super().__init__(self.resolve_uri(artifact_uri, get_tracking_uri()))
+  File "E:\End-to-End-MLProject-with-MLFlow\venv\lib\site-packages\mlflow\store\artifact\mlflow_artifacts_repo.py", line 59, in resolve_uri
+    _validate_uri_scheme(track_parse.scheme)
+  File "E:\End-to-End-MLProject-with-MLFlow\venv\lib\site-packages\mlflow\store\artifact\mlflow_artifacts_repo.py", line 35, in _validate_uri_scheme
+    raise MlflowException(
+mlflow.exceptions.MlflowException: The configured tracking uri scheme: 'file' is invalid for use with the proxy mlflow-artifact scheme. The allowed tracking schemes are: {'http', 'https'}
+[2026-02-11 12:41:27,846: INFO: main: >>>>>>>> Data Ingestion Stage started <<<<<<<<]
+[2026-02-11 12:41:27,853: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-11 12:41:27,855: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-11 12:41:27,867: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-11 12:41:27,886: INFO: common: created directory at: artifacts]
+[2026-02-11 12:41:27,889: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-02-11 12:41:27,891: INFO: data_ingestion: File already exists of size: ~ 23 KB]
+[2026-02-11 12:41:27,927: INFO: main: >>>>>>>> Data Ingestion Stage completed <<<<<<<]
+[2026-02-11 12:41:27,928: INFO: main: >>>>>>>> Data Validation Stage started <<<<<<<<]
+[2026-02-11 12:41:27,933: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-11 12:41:27,934: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-11 12:41:27,939: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-11 12:41:27,943: INFO: common: created directory at: artifacts]
+[2026-02-11 12:41:27,966: INFO: common: created directory at: artifacts/data_validation]
+[2026-02-11 12:41:27,995: INFO: main: >>>>>>>> Data Validation Stage completed <<<<<<<]
+[2026-02-11 12:41:27,996: INFO: main: >>>>>>>> Data Transformation Stage started <<<<<<<<]
+[2026-02-11 12:41:28,001: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-11 12:41:28,020: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-11 12:41:28,025: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-11 12:41:28,111: INFO: common: created directory at: artifacts]
+[2026-02-11 12:41:28,112: INFO: common: created directory at: artifacts/data_transformation]
+[2026-02-11 12:41:28,170: INFO: data_transformation: Splited data into training and test sets]
+[2026-02-11 12:41:28,175: INFO: data_transformation: (1199, 12)]
+[2026-02-11 12:41:28,176: INFO: data_transformation: (400, 12)]
+[2026-02-11 12:41:28,181: INFO: main: >>>>>>>> Data Transformation Stage completed <<<<<<<]
+[2026-02-11 12:41:28,181: INFO: main: >>>>>>>> Model Training Stage started <<<<<<<<]
+[2026-02-11 12:41:28,187: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-11 12:41:28,189: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-11 12:41:28,192: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-11 12:41:28,216: INFO: common: created directory at: artifacts]
+[2026-02-11 12:41:28,217: INFO: common: created directory at: artifacts/model_trainer]
+[2026-02-11 12:41:28,246: INFO: main: >>>>>>>> Model Training Stage completed <<<<<<<]
+[2026-02-11 12:41:28,247: INFO: main: >>>>>>>> Model Evaluation Stage started <<<<<<<<]
+[2026-02-11 12:41:28,252: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-11 12:41:28,254: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-11 12:41:28,262: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-11 12:41:28,267: INFO: common: created directory at: artifacts]
+[2026-02-11 12:41:28,269: INFO: common: created directory at: artifacts/model_evaluation]
+[2026-02-11 12:41:28,564: INFO: common: json file saved at: artifacts\model_evaluation\metrics.json]
+[2026-02-11 12:41:34,818: INFO: main: >>>>>>>> Model Evaluation Stage completed <<<<<<<]
+[2026-02-11 12:56:27,797: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.55.104:8080]
+[2026-02-11 12:56:27,802: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2026-02-11 12:56:27,829: INFO: _internal:  * Restarting with stat]
+[2026-02-11 12:56:29,263: WARNING: _internal:  * Debugger is active!]
+[2026-02-11 12:56:29,267: INFO: _internal:  * Debugger PIN: 739-456-279]
+[2026-02-11 12:56:39,874: INFO: _internal: 127.0.0.1 - - [11/Feb/2026 12:56:39] "GET / HTTP/1.1" 200 -]
+[2026-02-11 12:56:46,279: INFO: _internal: 127.0.0.1 - - [11/Feb/2026 12:56:46] "GET /static/css/styles.css HTTP/1.1" 200 -]
+[2026-02-11 12:56:46,282: INFO: _internal: 127.0.0.1 - - [11/Feb/2026 12:56:46] "GET /static/css2/nunito-font.css HTTP/1.1" 200 -]
+[2026-02-11 12:56:46,287: INFO: _internal: 127.0.0.1 - - [11/Feb/2026 12:56:46] "GET /static/css2/style.css HTTP/1.1" 200 -]
+[2026-02-11 12:56:46,291: INFO: _internal: 127.0.0.1 - - [11/Feb/2026 12:56:46] "GET /static/js/scripts.js HTTP/1.1" 200 -]
+[2026-02-11 12:56:49,055: INFO: _internal: 127.0.0.1 - - [11/Feb/2026 12:56:49] "[33mGET /static/assets/img/wine.jpg HTTP/1.1[0m" 404 -]
+[2026-02-11 12:56:49,059: INFO: _internal: 127.0.0.1 - - [11/Feb/2026 12:56:49] "GET /static/assets/img/form-v9.jpg HTTP/1.1" 200 -]
+[2026-02-11 12:56:49,807: INFO: _internal: 127.0.0.1 - - [11/Feb/2026 12:56:49] "[33mGET /static/fonts/Nunito/Nunito-Bold.ttf HTTP/1.1[0m" 404 -]
+[2026-02-11 12:56:51,232: INFO: _internal: 127.0.0.1 - - [11/Feb/2026 12:56:51] "GET /static/assets/favicon.ico HTTP/1.1" 200 -]
+[2026-02-11 13:00:06,801: INFO: _internal:  * Detected change in 'E:\\End-to-End-MLProject-with-MLFlow\\app.py', reloading]
+[2026-02-11 13:00:06,999: INFO: _internal:  * Restarting with stat]
+[2026-02-11 13:00:24,870: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.55.104:8080]
+[2026-02-11 13:00:24,897: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2026-02-11 13:00:24,901: INFO: _internal:  * Restarting with stat]
+[2026-02-11 13:00:26,081: WARNING: _internal:  * Debugger is active!]
+[2026-02-11 13:00:26,086: INFO: _internal:  * Debugger PIN: 739-456-279]
+[2026-02-11 13:00:30,011: INFO: _internal: 127.0.0.1 - - [11/Feb/2026 13:00:30] "GET / HTTP/1.1" 200 -]
+[2026-02-11 13:00:33,165: INFO: _internal: 127.0.0.1 - - [11/Feb/2026 13:00:33] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -]
+[2026-02-11 13:00:33,175: INFO: _internal: 127.0.0.1 - - [11/Feb/2026 13:00:33] "[36mGET /static/css2/nunito-font.css HTTP/1.1[0m" 304 -]
+[2026-02-11 13:00:33,179: INFO: _internal: 127.0.0.1 - - [11/Feb/2026 13:00:33] "[36mGET /static/css2/style.css HTTP/1.1[0m" 304 -]
+[2026-02-11 13:00:33,227: INFO: _internal: 127.0.0.1 - - [11/Feb/2026 13:00:33] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -]
+[2026-02-11 13:00:33,279: INFO: _internal: 127.0.0.1 - - [11/Feb/2026 13:00:33] "[33mGET /static/assets/img/wine.jpg HTTP/1.1[0m" 404 -]
+[2026-02-11 13:00:33,282: INFO: _internal: 127.0.0.1 - - [11/Feb/2026 13:00:33] "[36mGET /static/assets/img/form-v9.jpg HTTP/1.1[0m" 304 -]
+[2026-02-11 13:00:33,360: INFO: _internal: 127.0.0.1 - - [11/Feb/2026 13:00:33] "[33mGET /static/fonts/Nunito/Nunito-Bold.ttf HTTP/1.1[0m" 404 -]
+[2026-02-11 13:01:19,219: INFO: main: >>>>>>>> Data Ingestion Stage started <<<<<<<<]
+[2026-02-11 13:01:19,225: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-11 13:01:19,227: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-11 13:01:19,230: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-11 13:01:19,231: INFO: common: created directory at: artifacts]
+[2026-02-11 13:01:19,231: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-02-11 13:01:20,567: INFO: data_ingestion: artifacts/data_ingestion/data.zip download! with following info: 
+Connection: close
+Content-Length: 23329
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "c69888a4ae59bc5a893392785a938ccd4937981c06ba8a9d6a21aa52b4ab5b6e"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 595D:09F6:530A00:C4ABC6:698C290C
+Accept-Ranges: bytes
+Date: Wed, 11 Feb 2026 07:31:21 GMT
+Via: 1.1 varnish
+X-Served-By: cache-maa10231-MAA
+X-Cache: HIT
+X-Cache-Hits: 0
+X-Timer: S1770795081.143513,VS0,VE283
+Vary: Authorization,Accept-Encoding
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: ec45f0329635540a064379ed707b54e230590f04
+Expires: Wed, 11 Feb 2026 07:36:21 GMT
+Source-Age: 0
+
+]
+[2026-02-11 13:01:20,584: INFO: main: >>>>>>>> Data Ingestion Stage completed <<<<<<<]
+[2026-02-11 13:01:20,585: INFO: main: >>>>>>>> Data Validation Stage started <<<<<<<<]
+[2026-02-11 13:01:20,590: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-11 13:01:20,591: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-11 13:01:20,595: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-11 13:01:20,596: INFO: common: created directory at: artifacts]
+[2026-02-11 13:01:20,598: INFO: common: created directory at: artifacts/data_validation]
+[2026-02-11 13:01:20,611: INFO: main: >>>>>>>> Data Validation Stage completed <<<<<<<]
+[2026-02-11 13:01:20,612: INFO: main: >>>>>>>> Data Transformation Stage started <<<<<<<<]
+[2026-02-11 13:01:20,620: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-11 13:01:20,622: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-11 13:01:20,626: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-11 13:01:20,627: INFO: common: created directory at: artifacts]
+[2026-02-11 13:01:20,628: INFO: common: created directory at: artifacts/data_transformation]
+[2026-02-11 13:01:20,666: INFO: data_transformation: Splited data into training and test sets]
+[2026-02-11 13:01:20,666: INFO: data_transformation: (1199, 12)]
+[2026-02-11 13:01:20,667: INFO: data_transformation: (400, 12)]
+[2026-02-11 13:01:20,667: INFO: main: >>>>>>>> Data Transformation Stage completed <<<<<<<]
+[2026-02-11 13:01:20,667: INFO: main: >>>>>>>> Model Training Stage started <<<<<<<<]
+[2026-02-11 13:01:20,673: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-11 13:01:20,674: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-11 13:01:20,677: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-11 13:01:20,678: INFO: common: created directory at: artifacts]
+[2026-02-11 13:01:20,680: INFO: common: created directory at: artifacts/model_trainer]
+[2026-02-11 13:01:20,700: INFO: main: >>>>>>>> Model Training Stage completed <<<<<<<]
+[2026-02-11 13:01:20,701: INFO: main: >>>>>>>> Model Evaluation Stage started <<<<<<<<]
+[2026-02-11 13:01:20,706: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-11 13:01:20,707: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-11 13:01:20,710: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-11 13:01:20,711: INFO: common: created directory at: artifacts]
+[2026-02-11 13:01:20,712: INFO: common: created directory at: artifacts/model_evaluation]
+[2026-02-11 13:01:20,919: INFO: common: json file saved at: artifacts\model_evaluation\metrics.json]
+[2026-02-11 13:01:27,390: INFO: main: >>>>>>>> Model Evaluation Stage completed <<<<<<<]
+[2026-02-11 13:01:27,810: INFO: _internal: 127.0.0.1 - - [11/Feb/2026 13:01:27] "GET /train HTTP/1.1" 200 -]
+[2026-02-11 13:01:27,858: INFO: _internal: 127.0.0.1 - - [11/Feb/2026 13:01:27] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -]
+[2026-02-11 13:01:43,998: INFO: _internal: 127.0.0.1 - - [11/Feb/2026 13:01:43] "GET / HTTP/1.1" 200 -]
+[2026-02-11 13:01:44,042: INFO: _internal: 127.0.0.1 - - [11/Feb/2026 13:01:44] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -]
+[2026-02-11 13:01:44,047: INFO: _internal: 127.0.0.1 - - [11/Feb/2026 13:01:44] "[36mGET /static/css2/nunito-font.css HTTP/1.1[0m" 304 -]
+[2026-02-11 13:01:44,059: INFO: _internal: 127.0.0.1 - - [11/Feb/2026 13:01:44] "[36mGET /static/css2/style.css HTTP/1.1[0m" 304 -]
+[2026-02-11 13:01:44,063: INFO: _internal: 127.0.0.1 - - [11/Feb/2026 13:01:44] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -]
+[2026-02-11 13:01:44,105: INFO: _internal: 127.0.0.1 - - [11/Feb/2026 13:01:44] "[33mGET /static/assets/img/wine.jpg HTTP/1.1[0m" 404 -]
+[2026-02-11 13:01:44,175: INFO: _internal: 127.0.0.1 - - [11/Feb/2026 13:01:44] "[36mGET /static/assets/img/form-v9.jpg HTTP/1.1[0m" 304 -]
+[2026-02-11 13:01:44,178: INFO: _internal: 127.0.0.1 - - [11/Feb/2026 13:01:44] "[33mGET /static/fonts/Nunito/Nunito-Bold.ttf HTTP/1.1[0m" 404 -]
+[2026-02-11 13:06:19,380: INFO: _internal:  * Detected change in 'E:\\End-to-End-MLProject-with-MLFlow\\app.py', reloading]
+[2026-02-11 13:06:19,625: INFO: _internal:  * Restarting with stat]
+[2026-02-11 13:06:32,437: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.55.104:8080]
+[2026-02-11 13:06:32,438: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2026-02-11 13:06:32,441: INFO: _internal:  * Restarting with stat]
+[2026-02-11 13:06:33,618: WARNING: _internal:  * Debugger is active!]
+[2026-02-11 13:06:33,621: INFO: _internal:  * Debugger PIN: 739-456-279]
+[2026-02-11 13:06:43,806: INFO: _internal: 127.0.0.1 - - [11/Feb/2026 13:06:43] "GET / HTTP/1.1" 200 -]
+[2026-02-11 13:06:46,286: INFO: _internal: 127.0.0.1 - - [11/Feb/2026 13:06:46] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -]
+[2026-02-11 13:06:46,301: INFO: _internal: 127.0.0.1 - - [11/Feb/2026 13:06:46] "[36mGET /static/css2/nunito-font.css HTTP/1.1[0m" 304 -]
+[2026-02-11 13:06:46,320: INFO: _internal: 127.0.0.1 - - [11/Feb/2026 13:06:46] "[36mGET /static/css2/style.css HTTP/1.1[0m" 304 -]
+[2026-02-11 13:06:46,326: INFO: _internal: 127.0.0.1 - - [11/Feb/2026 13:06:46] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -]
+[2026-02-11 13:06:46,367: INFO: _internal: 127.0.0.1 - - [11/Feb/2026 13:06:46] "[33mGET /static/assets/img/wine.jpg HTTP/1.1[0m" 404 -]
+[2026-02-11 13:06:46,405: INFO: _internal: 127.0.0.1 - - [11/Feb/2026 13:06:46] "[36mGET /static/assets/img/form-v9.jpg HTTP/1.1[0m" 304 -]
+[2026-02-11 13:06:46,473: INFO: _internal: 127.0.0.1 - - [11/Feb/2026 13:06:46] "[33mGET /static/fonts/Nunito/Nunito-Bold.ttf HTTP/1.1[0m" 404 -]
+[2026-02-11 13:07:25,209: INFO: _internal: 127.0.0.1 - - [11/Feb/2026 13:07:25] "POST /predict HTTP/1.1" 200 -]
+[2026-02-11 13:07:25,260: INFO: _internal: 127.0.0.1 - - [11/Feb/2026 13:07:25] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -]
+[2026-02-11 13:07:25,262: INFO: _internal: 127.0.0.1 - - [11/Feb/2026 13:07:25] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -]
+[2026-02-11 13:07:25,299: INFO: _internal: 127.0.0.1 - - [11/Feb/2026 13:07:25] "[33mGET /static/assets/img/wine.gif HTTP/1.1[0m" 404 -]
